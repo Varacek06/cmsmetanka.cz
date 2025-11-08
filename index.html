@@ -1,30 +1,150 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="utf-8">
-  <title>Cimbálová muzika Smetanka, z. s.</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cimbálová muzika Smetanka, z. s.</title>
+
+  <!-- Favicon a Apple touch -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+
+  <style>
+    :root {
+      --main-color: #800000;
+      --bg-color: #faf9f8;
+      --text-color: #222;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ====== HLAVIČKA S LOGEM ====== */
+    header {
+      background: var(--main-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header img {
+      width: 60px;
+      height: auto;
+      border-radius: 8px;
+    }
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+    header p {
+      width: 100%;
+      margin-top: 0.3rem;
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+
+    main {
+      flex: 1;
+      max-width: 750px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      line-height: 1.7;
+    }
+
+    h2 {
+      color: var(--main-color);
+      border-bottom: 2px solid var(--main-color);
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+
+    p, address {
+      margin: 0.5rem 0 1rem;
+      text-align: center;
+    }
+
+    strong {
+      color: var(--main-color);
+    }
+
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 1.5rem;
+      background: #f1f1f1;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 600px) {
+      main { margin: 1.5rem; padding: 1.5rem; }
+      header h1 { font-size: 1.7rem; }
+      header img { width: 50px; }
+    }
+  </style>
 </head>
+
 <body>
   <header>
-    <h1>Cimbálová muzika Smetanka, z. s.</h1>
+    <img src="favicon.png" alt="Logo Cimbálové muziky Smetanka">
+    <div>
+      <h1>Cimbálová muzika Smetanka, z. s.</h1>
+      <p>Oficiální web spolku</p>
+    </div>
   </header>
 
-  <section>
-    <h2>Oficiální údaje</h2>
-    <p><strong>Název:</strong> Cimbálová muzika Smetanka, z. s.</p>
-    <p><strong>IČO:</strong> <em>23695960</em></p>
-    <p><strong>Sídlo / adresa:</strong> <em>Sochorova 3178/21, 616 00 Brno</em></p>
-  </section>
+  <main>
+    <section>
+      <h2>Oficiální údaje</h2>
+      <p><strong>Název:</strong> Cimbálová muzika Smetanka, z. s.</p>
+      <p><strong>IČO:</strong> 23695960</p>
+      <p><strong>Sídlo / adresa:</strong> Sochorova 3178/21, 616 00 Brno</p>
+    </section>
 
-  <section>
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:info@cmsmetanka.cz">info@cmsmetanka.cz</a></p>
-    <p>Telefon: <a href="tel:+420731543969">+420 731 543 969</a></p>
-  </section>
+    <section>
+      <h2>Kontakt</h2>
+      <address>
+        📧 E-mail: <a href="mailto:info@cmsmetanka.cz">info@cmsmetanka.cz</a><br>
+        📞 Telefon: <a href="tel:+420731543969">+420 731 543 969</a><br>
+        🌐 Web: <a href="https://cmsmetanka.cz">www.cmsmetanka.cz</a>
+      </address>
+    </section>
+
+    <section>
+      <h2>O spolku</h2>
+      <p>
+        Cimbálová muzika Smetanka Brno působí při ZUŠ Smetanova v Brně a věnuje se interpretaci moravského folkloru 
+        v moderním i tradičním pojetí. Tvoří ji mladí muzikanti a zpěváci z celého Brna a okolí.
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p>Tato stránka běží na doméně <strong>cmsmetanka.cz</strong> a slouží jako oficiální web spolku.</p>
+    © 2025 Cimbálová muzika Smetanka, z. s. · Oficiální web spolku cmsmetanka.cz
   </footer>
 </body>
 </html>
