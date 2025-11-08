@@ -1,163 +1,151 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cimbálová muzika Smetanka, z. s.</title>
-    <link rel="icon" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cimbálová muzika Smetanka, z. s.</title>
 
-    <style>
-      :root {
-        --main-color: #1B2E67;
-        --accent-color: #F0F4FA;
-        --text-color: #222;
-        --radius: 12px;
-        --transition: 0.3s;
-      }
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+  <style>
+    :root {
+      --main-color: #1B2E67; /* barva loga */
+      --bg-color: #faf9f8;
+      --text-color: #222;
+      --radius: 14px;
+    }
 
-      body {
-        font-family: "Segoe UI", Roboto, sans-serif;
-        color: var(--text-color);
-        background: var(--accent-color);
-      }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-      header {
-        background: var(--main-color);
-        color: #fff;
-        padding: 3rem 1rem 2rem;
-        text-align: center;
-      }
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-      header img {
-        width: 80px;
-        height: auto;
-        border-radius: 10px;
-        display: block;
-        margin: 0 auto 1rem;
-      }
+    /* ====== HLAVIČKA S LOGEM ====== */
+    header {
+      background: var(--main-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    header img {
+      width: 60px;
+      height: auto;
+      border-radius: 8px;
+    }
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.5px;
+    }
+    header p {
+      width: 100%;
+      margin-top: 0.3rem;
+      opacity: 0.9;
+      font-size: 1rem;
+    }
 
-      header h1 {
-        font-size: 2.2rem;
-        margin-bottom: 0.3rem;
-      }
+    main {
+      flex: 1;
+      max-width: 750px;
+      margin: 2.5rem auto;
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 2.5rem 2rem;
+      line-height: 1.7;
+    }
 
-      header p {
-        font-size: 1.1rem;
-        opacity: 0.8;
-      }
+    h2 {
+      color: var(--main-color);
+      border-bottom: 2px solid var(--main-color);
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
 
-      main {
-        max-width: 900px;
-        margin: -50px auto 2rem;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-      }
+    p, address {
+      margin: 0.5rem 0 1rem;
+      text-align: center;
+    }
 
-      section {
-        background: #fff;
-        border-radius: var(--radius);
-        padding: 2rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
+    strong {
+      color: var(--main-color);
+    }
 
-      h2 {
-        color: var(--main-color);
-        margin-bottom: 1rem;
-        border-bottom: 2px solid var(--main-color);
-        padding-bottom: 0.3rem;
-      }
+    a {
+      color: var(--main-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
-      p {
-        margin-bottom: 1rem;
-        line-height: 1.6;
-      }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      padding: 1.5rem;
+      background: #f1f1f1;
+      border-top: 1px solid #ddd;
+    }
 
-      address {
-        font-style: normal;
-      }
+    @media (max-width: 600px) {
+      main { margin: 1.5rem; padding: 1.5rem; }
+      header h1 { font-size: 1.7rem; }
+      header img { width: 50px; }
+    }
+  </style>
+</head>
 
-      a {
-        color: var(--main-color);
-        text-decoration: none;
-        font-weight: 600;
-        transition: var(--transition);
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .cta {
-        display: inline-block;
-        margin-top: 0.5rem;
-        margin-right: 0.5rem;
-        padding: 0.5rem 1rem;
-        background: var(--main-color);
-        color: #fff;
-        border-radius: 6px;
-        transition: var(--transition);
-      }
-
-      .cta:hover {
-        background: #0f1f49;
-      }
-
-      footer {
-        text-align: center;
-        font-size: 0.9rem;
-        color: #666;
-        padding: 1.5rem;
-      }
-
-      @media (max-width: 600px) {
-        header h1 { font-size: 1.8rem; }
-        header img { width: 60px; }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <img src="favicon.png" alt="Logo Cimbálky">
+<body>
+  <header>
+    <img src="favicon.png" alt="Logo Cimbálové muziky Smetanka">
+    <div>
       <h1>Cimbálová muzika Smetanka, z. s.</h1>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section>
-        <h2>O nás</h2>
-        <p>Jsme cimbálka z Brna, hrajeme folklor napříč regiony Česka, Slovenska a Balkánu. Více než 10 let spolu hudebně tvoříme a účastníme se soutěží a přehlídek. Od léta 2024 doprovázíme TS Hradišťan.</p>
-        <a class="cta" href="mailto:info@cmsmetanka.cz">Napište nám 📧</a>
-        <a class="cta" href="tel:+420731543969">Zavolejte nám 📞</a>
-      </section>
+  <main>
+    <section>
+      <h2>O nás</h2>
+      <p>Jsme cimbálka z Brna, ale věnujeme se folkloru napříč regiony jak Česka, tak sousedního Slovenska a taky Balkánu. Hrajeme spolu přes 10 let a máme za sebou spoustu úspešných soutěží a přehlídek.</p>
+      <p>Od léta 2024 doprovázíme TS Hradišťan.</p>
+      <p>Rádi Vám zahrajeme!😊</p>
+    </section>
 
-      <section>
-        <h2>Kontakt</h2>
-        <address>
-          📧 <a href="mailto:info@cmsmetanka.cz">info@cmsmetanka.cz</a><br>
-          📞 <a href="tel:+420731543969">+420 731 543 969</a><br>
-          🌐 <a href="https://cmsmetanka.cz">www.cmsmetanka.cz</a>
-        </address>
-      </section>
+    <section>
+      <h2>Kontakt</h2>
+      <address>
+        📧 E-mail: <a href="mailto:info@cmsmetanka.cz">info@cmsmetanka.cz</a><br>
+        📞 Telefon: <a href="tel:+420731543969">+420 731 543 969</a><br>
+        🌐 Web: <a href="https://cmsmetanka.cz">www.cmsmetanka.cz</a>
+      </address>
+    </section>
 
-      <section>
-        <h2>Oficiální údaje</h2>
-        <p><strong>Název:</strong> Cimbálová muzika Smetanka, z. s.</p>
-        <p><strong>IČO:</strong> 23695960</p>
-        <p><strong>Sídlo:</strong> Sochorova 3178/21, 616 00 Brno</p>
-      </section>
-    </main>
+    <section>
+      <h2>Oficiální údaje</h2>
+      <p><strong>Název:</strong> Cimbálová muzika Smetanka, z. s.</p>
+      <p><strong>IČO:</strong> 23695960</p>
+      <p><strong>Sídlo:</strong> Sochorova 3178/21, 616 00 Brno</p>
+    </section>
 
-    <footer>
-      © 2025 Cimbálová muzika Smetanka, z. s.
-    </footer>
-  </body>
+  </main>
+
+  <footer>
+    © 2025 Cimbálová muzika Smetanka, z. s.
+  </footer>
+</body>
 </html>
